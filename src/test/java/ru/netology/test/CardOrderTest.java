@@ -44,7 +44,7 @@ public class CardOrderTest {
         $("[data-test-id=phone] input").setValue("+78910000000");
 //        $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
-        $("[data-test-id=agreement].input_invalid").shouldHave(exactText("Соглашаюсь с условиями обработки и использования моих персональных данных."));
+        $("[data-test-id=agreement].input_invalid").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
 
     @Test
@@ -54,6 +54,6 @@ public class CardOrderTest {
         $("[data-test-id=phone] input").setValue("+78910000000");
         $("[data-test-id=agreement]").click();
         $("button[type=button]").click();
-        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаны неверно."));
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
     }
 }
